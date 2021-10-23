@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SenderInfo from "./components/sender-info/SenderInfo";
+import RecieverInfo from "./components/reciever-info/RecieverInfo";
+import Group from "./components/group/Group";
+import Chat from "./pages/Chat";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path={"/"} exact component={SignUp} />
+        <Route path={"/chat"} exact component={Chat} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
