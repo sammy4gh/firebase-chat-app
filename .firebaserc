@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "fir-chat-app-eee89",
+    "chat-app": "fir-chat-app-eee89"
+  },
+  "targets": {}
+}
